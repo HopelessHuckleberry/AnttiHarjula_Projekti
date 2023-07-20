@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  margin: 22px;
+}
+
+.grid {
+  display: grid;
+}
+
+nav {
+  background-color: #f16e05;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
