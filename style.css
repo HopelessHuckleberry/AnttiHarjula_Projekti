@@ -4,20 +4,98 @@
   box-sizing: border-box;
 }
 
+html {
+  /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Does NOT work on Safari */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  background-color: #feffff;
+  font-size: 1.8rem;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #1a1919;
+  /* Only works if there is nothing absolutely positioned in relation to body */
+  overflow-x: hidden;
+}
+
+section {
+  letter-spacing: 0.1rem;
+  word-spacing: 0.1rem;
+}
+
 li {
   list-style: none;
   text-align: center;
-  margin: 22px;
+  margin: 2.2rem;
 }
 
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: #f16e05;
+}
+
+.header img {
+  opacity: 0.7;
+}
+
+.logo {
+  width: 75%;
+  height: 8rem;
+  display: inline-block;
+  margin: 0 10rem 0 auto;
+}
 .grid {
   display: grid;
 }
 
+.price {
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 nav {
-  background-color: #f16e05;
+  /* background-color: #f16e05; */
 }
 nav ul {
   display: flex;
   justify-content: space-between;
 }
+nav a {
+  text-decoration: none;
+}
+.hero-description {
+  margin: 4rem 2rem 10rem;
+  padding: 2rem;
+}
+
+.footer {
+  height: 10rem;
+  background-color: #68d121;
+  margin: 0 auto;
+  padding: 4rem 0 0 0;
+}
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+*/
