@@ -30,7 +30,8 @@ body {
 section {
   letter-spacing: 0.1rem;
   word-spacing: 0.1rem;
-  margin: 0 2rem;
+  margin-bottom: 2rem;
+  border: #000 dashed;
 }
 
 li {
@@ -47,26 +48,27 @@ li {
   background-color: #f16e05;
 }
 
-.header img {
-  opacity: 0.7;
-}
+
 
 .pump-image1 {
-  height: 10em;
+  display: block;
+  width: 90%;
+  height: auto;
 }
 .logo {
-  width: 75%;
-  height: 5rem;
-  display: inline-block;
+  display: block;
+  background:#f16e05;
+  width: 100%;
+  height: 6rem;
+  /* display: inline-block; */
   margin: 0 auto;
 }
 .grid {
   display: grid;
 }
 
-.grid-col--2 {
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 4px;
+@media only screen and (min-width: 750px) {
+  
 }
 
 .price {
@@ -88,11 +90,14 @@ nav a {
 
 .hero {
   background: url(Img/lightning.jpg);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 100vh;
+  width: 100%;
   color: #ccddff;
   display: flex;
+  justify-content: center;
 }
 
 .hero p {
@@ -106,7 +111,7 @@ nav a {
 .taulu-img img {
   display: inline-block;
   object-fit: cover;
-  width: 50vw;
+  width: 100%;
   height: 100%;
 }
 
@@ -120,6 +125,11 @@ nav a {
 @media only screen and (min-width: 750px) {
   nav {
     display: flex;
+  }
+
+  .grid-col--2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
   }
 }
 /*
