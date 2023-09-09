@@ -30,7 +30,8 @@ body {
 section {
   letter-spacing: 0.1rem;
   word-spacing: 0.1rem;
-  margin-bottom: 2rem;
+  margin: 3rem 2rem;
+  padding: 0.8rem;
   border: #000 dashed;
 }
 
@@ -55,6 +56,7 @@ li {
   width: 90%;
   height: auto;
 }
+
 .logo {
   display: block;
   background:#f16e05;
@@ -62,13 +64,6 @@ li {
   height: 6rem;
   /* display: inline-block; */
   margin: 0 auto;
-}
-.grid {
-  display: grid;
-}
-
-@media only screen and (min-width: 750px) {
-  
 }
 
 .price {
@@ -89,23 +84,24 @@ nav a {
 }
 
 .hero {
-  background: url(Img/lightning.jpg);
-  background-position: center;
+  background: url(Img/AH_Hero_BG.jpg);
+  background-position: right center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
   color: #ccddff;
-  display: flex;
-  justify-content: center;
 }
 
-.hero p {
-  display: flex;
+.hero .grid {
+  grid-template-columns: 48% 52%;
 }
+
 .hero-description {
-  margin: 4rem 2rem 10rem;
+  display: grid;
+  margin: 2rem 2rem;
   padding: 2rem;
+  grid-area: 1/1/3/4;
 }
 
 .taulu-img img {
@@ -122,16 +118,34 @@ nav a {
   padding: 4rem 0 0 0;
 }
 
+.grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (min-width: 750px) {
   nav {
     display: flex;
   }
 
+  .hero {
+    background-position: center bottom;
+  }
+
   .grid-col--2 {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4px;
+    grid-gap: 1rem;
+  }
+
+  .grid-col--3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
   }
 }
+
+
+
 /*
 --- 01 TYPOGRAPHY SYSTEM
 
