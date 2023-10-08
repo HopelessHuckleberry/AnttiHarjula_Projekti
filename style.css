@@ -67,18 +67,24 @@ li {
   margin: 0 auto;
 }
 
-.menu-button::before {
+/* .menu-button::before {
   content: "MENU ";
-}
+} */
 
 .menu-button {
   background-color: transparent;
   color: #1a1919;
   padding: 1rem;
-  font-weight: 900;
+  font-weight: 700;
   border: none;
   cursor: pointer;
   font-size: 2rem;
+  width: 5rem;
+}
+
+.menu-button:hover {
+  background-color: #ffbf00;
+  border-radius: 5px;
 }
 
 .price {
@@ -97,6 +103,7 @@ nav ul {
 }
 nav a {
   text-decoration: none;
+  color: #1a1919;
 }
 
 .hero {
@@ -108,17 +115,27 @@ nav a {
   width: 100%;
 }
 
-.hero .grid {
+/* .hero .grid {
   grid-template-columns: 48% 52%;
-}
+} */
 
 .hero-description {
-  /* display: grid; */
+  display: grid;
   margin: 2rem 2rem;
   padding: 2rem;
-  /* grid-area: 1/1/3/4; */
-  color: #ffbf00;
-  background: #68d121;
+  color: #fff;
+  opacity: 1;
+}
+
+.hero-description-container {
+  background-color: #2e2c27;
+  opacity: 0.67;
+  border-radius: 0.5rem;
+}
+
+.hero-empty {
+  display: grid;
+  width: 100%;
 }
 
 .taulu-img img {
@@ -126,6 +143,11 @@ nav a {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.pic img {
+  display: block;
+  width: 100%;
 }
 
 .footer {
@@ -141,10 +163,20 @@ nav a {
   align-items: center;
 }
 
+.grid-col--1 {
+  grid-template-columns: 1fr;
+}
+
+.grid-col--3 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
 @media only screen and (min-width: 750px) {
   .header {
     justify-content: space-between;
   }
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -160,11 +192,6 @@ nav a {
 
   .grid-col--2 {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-  }
-
-  .grid-col--3 {
-    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
   }
 }
