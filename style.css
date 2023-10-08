@@ -133,11 +133,6 @@ nav a {
   border-radius: 0.5rem;
 }
 
-.hero-empty {
-  display: grid;
-  width: 100%;
-}
-
 .taulu-img img {
   display: inline-block;
   object-fit: cover;
@@ -194,7 +189,15 @@ nav a {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
   }
+
+  .products-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 }
+
+
 
 /*
 --- 01 TYPOGRAPHY SYSTEM
